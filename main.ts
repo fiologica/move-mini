@@ -12,10 +12,10 @@ basic.forever(function () {
     if (item == 1) {
         pins.servoWritePin(AnalogPin.P1, 180)
         pins.servoWritePin(AnalogPin.P2, 0)
-    } else if (item == 2) {
+    } else if (item == 3) {
         pins.servoWritePin(AnalogPin.P1, 0)
         pins.servoWritePin(AnalogPin.P2, 180)
-    } else if (item == 3) {
+    } else if (item == 2) {
         kitronik_servo_lite.stop()
     }
 })
