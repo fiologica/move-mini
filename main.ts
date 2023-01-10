@@ -5,10 +5,10 @@ radio.onReceivedNumber(function (receivedNumber) {
     item = receivedNumber
 })
 function pixelHeadlights () {
-    headlights = 50 - input.lightLevel() * 3
+    headlights = 5 - input.lightLevel() * 3
     if (input.lightLevel() < 85) {
         pixelArray.showColor(neopixel.colors(NeoPixelColors.White))
-        while (headlights < 50) {
+        while (headlights < 5) {
             headlights += 1
         }
         pixelArray.setBrightness(headlights)
