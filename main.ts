@@ -4,17 +4,6 @@ enum RadioMessage {
 radio.onReceivedNumber(function (receivedNumber) {
     item = receivedNumber
 })
-function remoteControl () {
-    if (item == 1) {
-        pins.servoWritePin(AnalogPin.P1, 0)
-        pins.servoWritePin(AnalogPin.P2, 180)
-    } else if (item == 3) {
-        pins.servoWritePin(AnalogPin.P1, 180)
-        pins.servoWritePin(AnalogPin.P2, 0)
-    } else if (item == 2) {
-        kitronik_servo_lite.stop()
-    }
-}
 function lineFollow () {
     rightDetector = pins.digitalReadPin(DigitalPin.P15)
     leftDetector = pins.digitalReadPin(DigitalPin.P16)
@@ -58,6 +47,5 @@ strip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
 strip.setPixelColor(5, neopixel.colors(NeoPixelColors.White))
 basic.forever(function () {
     headLights()
-    remoteControl()
     lineFollow()
 })
