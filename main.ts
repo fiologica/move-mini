@@ -7,7 +7,7 @@ basic.showIcon(IconNames.Happy)
 pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
 kitronik_servo_lite.setDistancePerSecond(100)
-kitronik_servo_lite.setDegreesPerSecond(50)
+kitronik_servo_lite.setDegreesPerSecond(1)
 basic.forever(function () {
     rightDetector = pins.digitalReadPin(DigitalPin.P15)
     leftDetector = pins.digitalReadPin(DigitalPin.P16)
