@@ -14,9 +14,9 @@ basic.forever(function () {
     if (leftDetector == 0 && rightDetector == 0) {
         kitronik_servo_lite.stop()
     } else if (leftDetector == 1 && rightDetector == 0) {
-        kitronik_servo_lite.left()
-    } else if (leftDetector == 0 && rightDetector == 1) {
         kitronik_servo_lite.right()
+    } else if (leftDetector == 0 && rightDetector == 1) {
+        kitronik_servo_lite.left()
     } else if (leftDetector == 1 && rightDetector == 1) {
         kitronik_servo_lite.forward()
     }
