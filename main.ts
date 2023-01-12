@@ -20,7 +20,6 @@ let rightDetector = 0
 let headlights = 0
 let strip: neopixel.Strip = null
 basic.showIcon(IconNames.Happy)
-servos.P0.setRange(0, 360)
 pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
 strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
