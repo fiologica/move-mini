@@ -1,5 +1,5 @@
 {
-    "name": "Move Mini - Reciever and Headlights #2",
+    "name": "Move Mini - Line Follower",
     "description": "",
     "dependencies": {
         "core": "*",

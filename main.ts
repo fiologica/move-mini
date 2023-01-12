@@ -2,6 +2,7 @@ enum RadioMessage {
     message1 = 49434
 }
 function headLights () {
+    let strip: neopixel.Strip = null
     headlights = 255 - input.lightLevel() * 3
     if (input.lightLevel() < 85) {
         strip.showColor(neopixel.colors(NeoPixelColors.White))
@@ -18,16 +19,10 @@ function headLights () {
 let leftDetector = 0
 let rightDetector = 0
 let headlights = 0
-let strip: neopixel.Strip = null
 basic.showIcon(IconNames.Happy)
 pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
-strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
-strip.setBrightness(50)
-strip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
-strip.setPixelColor(5, neopixel.colors(NeoPixelColors.White))
 basic.forever(function () {
-    headLights()
     rightDetector = pins.digitalReadPin(DigitalPin.P15)
     leftDetector = pins.digitalReadPin(DigitalPin.P16)
     if (leftDetector == 0 && rightDetector == 0) {
