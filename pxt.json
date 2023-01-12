@@ -8,7 +8,8 @@
         "radio-broadcast": "*",
         "pxt-kitronik-servo-lite": "github:kitronikltd/pxt-kitronik-servo-lite#v1.0.6",
         "microbit-pxt-clicks": "github:bsiever/microbit-pxt-clicks#v0.2.2",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.7.5"
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.5",
+        "servo": "*"
     },
     "files": [
         "main.blocks",
