@@ -8,7 +8,7 @@ function headLights () {
     headlights = 255 - input.lightLevel() * 3
     if (input.lightLevel() < 85) {
         strip.showColor(neopixel.colors(NeoPixelColors.White))
-        while (headlights < 50) {
+        while (headlights < 25) {
             headlights += 1
         }
         strip.setBrightness(headlights)
@@ -29,7 +29,7 @@ servos.P0.setRange(0, 360)
 pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
 strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
-strip.setBrightness(255)
+strip.setBrightness(50)
 strip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
 strip.setPixelColor(5, neopixel.colors(NeoPixelColors.White))
 basic.forever(function () {
