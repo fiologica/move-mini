@@ -4,36 +4,15 @@ enum RadioMessage {
 radio.onReceivedNumber(function (receivedNumber) {
     item = receivedNumber
 })
-function headLights () {
-    headlights = 255 - input.lightLevel() * 3
-    if (input.lightLevel() < 85) {
-        strip.showColor(neopixel.colors(NeoPixelColors.White))
-        while (headlights < 25) {
-            headlights += 1
-        }
-        strip.setBrightness(headlights)
-        strip.show()
-    } else if (input.lightLevel() >= 95) {
-        strip.clear()
-        strip.show()
-    }
-}
 let leftDetector = 0
 let rightDetector = 0
-let headlights = 0
 let item = 0
-let strip: neopixel.Strip = null
 radio.setGroup(44)
 basic.showIcon(IconNames.Happy)
 servos.P0.setRange(0, 360)
 pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
-strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
-strip.setBrightness(50)
-strip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
-strip.setPixelColor(5, neopixel.colors(NeoPixelColors.White))
 basic.forever(function () {
-    headLights()
     if (item == 1) {
         pins.servoWritePin(AnalogPin.P1, 0)
         pins.servoWritePin(AnalogPin.P2, 180)
